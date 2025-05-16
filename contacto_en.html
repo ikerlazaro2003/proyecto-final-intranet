@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Company Name</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header with logo and navigation -->
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Company Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index_en.html">Home</a></li>
+                <li><a href="empresa_en.html">About Us</a></li>
+                <li><a href="productos_en.html">Products/Services</a></li>
+                <li><a href="equipo_en.html">Our Team</a></li>
+                <li><a href="ideas_en.html">Have an Idea?</a></li>
+                <li><a href="idiomas.html">Languages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact form and company details -->
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <p>Feel free to reach out to us with any questions or comments. We're here to help!</p>
+
+        <form action="contacto.php" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Company contact details -->
+        <div class="company-info">
+            <h2>Our Contact Information:</h2>
+            <p>Address: 1234 Business St, City, Country</p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <p>Email: info@company.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Company Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

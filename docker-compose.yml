@@ -1,0 +1,104 @@
+services:
+
+  nextcloud:
+    image: nextcloud
+    container_name: nextcloud
+    ports:
+      - "8081:80"
+    volumes:
+      - nextcloud_data:/var/www/html
+    restart: unless-stopped
+
+  mongo:
+    image: mongo:5.0
+    container_name: mongo
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+  rocketchat:
+    image: registry.rocket.chat/rocketchat/rocket.chat:latest
+    container_name: rocketchat
+    ports:
+      - "3001:3000"
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/rocketchat
+      - ROOT_URL=http://localhost:3001
+      - PORT=3000
+    depends_on:
+      - mongo
+    restart: unless-stopped
+
+  moodle-db:
+    image: mariadb:10.6
+    container_name: moodle-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=moodlepass
+      - MYSQL_DATABASE=bitnami_moodle
+      - MYSQL_USER=bn_moodle
+      - MYSQL_PASSWORD=moodlepass
+    volumes:
+      - moodle_db_data:/var/lib/mysql
+    restart: unless-stopped
+
+  moodle:
+    image: bitnami/moodle:4.1.5
+    container_name: moodle
+    ports:
+      - "8084:8080"
+    environment:
+      - MOODLE_DATABASE_HOST=moodle-db
+      - MOODLE_DATABASE_PORT_NUMBER=3306
+      - MOODLE_DATABASE_USER=bn_moodle
+      - MOODLE_DATABASE_NAME=bitnami_moodle
+      - MOODLE_DATABASE_PASSWORD=moodlepass
+      - MOODLE_USERNAME=admin
+      - MOODLE_PASSWORD=admin123
+      - MOODLE_EMAIL=admin@example.com
+    depends_on:
+      - moodle-db
+    restart: unless-stopped
+
+  mantisdb:
+    image: mariadb:10.6
+    container_name: mantisdb
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=mantispass
+      - MYSQL_DATABASE=mantis
+      - MYSQL_USER=mantisuser
+      - MYSQL_PASSWORD=mantispass
+    volumes:
+      - mantis_db_data:/var/lib/mysql
+
+  mantisbt:
+    image: vimagick/mantisbt
+    container_name: mantisbt
+    ports:
+      - "8085:80"
+    environment:
+      - DB_HOST=mantisdb
+      - DB_NAME=mantis
+      - DB_USER=mantisuser
+      - DB_PASSWORD=mantispass
+    depends_on:
+      - mantisdb
+    restart: always
+
+volumes:
+  nextcloud_data:
+  mongo_data:
+  moodle_db_data:
+  mantis_db_data:
+
+
+
+
+
+
+
+
+
+
+
+

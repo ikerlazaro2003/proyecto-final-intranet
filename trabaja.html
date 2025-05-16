@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con Nosotros - Mi Empresa</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo Empresa" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="empresa.html">La Empresa</a></li>
+                <li><a href="productos.html">Productos/Servicios</a></li>
+                <li><a href="equipo.html">El Equipo</a></li>
+                <li><a href="ideas.html">¿Tienes una idea?</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="redes.html">Redes Sociales</a></li>
+                <li><a href="login.php">Inicio de Sesión</a></li>
+                <li><a href="incidencias.php">Gestión de Incidencias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contenido">
+            <h1>Trabaja con Nosotros</h1>
+            <p>Si quieres formar parte de nuestro equipo, rellena el siguiente formulario y adjunta tu CV:</p>
+
+            <form action="php/trabaja.php" method="post" enctype="multipart/form-data">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Carta de Presentación:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <label for="cv">Adjuntar CV:</label>
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Empresa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
