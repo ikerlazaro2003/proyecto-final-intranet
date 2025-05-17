@@ -2,50 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Have an Idea? - Company Name</title>
+    <title>Have an Idea? - Fictional Company</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header with logo and navigation -->
-    <header>
-        <div class="logo">
-            <img src="img/logo.png" alt="Company Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index_en.html">Home</a></li>
-                <li><a href="empresa_en.html">About Us</a></li>
-                <li><a href="productos_en.html">Products/Services</a></li>
-                <li><a href="equipo_en.html">Our Team</a></li>
-                <li><a href="contacto_en.html">Contact</a></li>
-                <li><a href="idiomas.html">Languages</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Main content for idea submission -->
-    <section class="idea-submission">
-        <h1>Have an Idea?</h1>
-        <p>We would love to hear from you! If you have any idea or suggestion for us, feel free to send it:</p>
-        
-        <form action="procesa_idea.php" method="post">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="idea">Your Idea/Suggestion:</label>
-            <textarea id="idea" name="idea" required></textarea>
-
-            <button type="submit">Submit Idea</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
-    </footer>
+<header>
+    <img src="img/logo_webinova.png" alt="Webinova Solutions Logo" style="height: 80px;"><h1>Fictional Company</h1></header>
+<nav>
+    <ul>
+        <li><a href="index_en.html">Home</a></li>
+        <li><a href="empresa_en.html">The Company</a></li>
+        <li><a href="productos_en.html">Products/Services</a></li>
+        <li><a href="equipo_en.html">The Team</a></li>
+        <li><a href="ideas_en.html">Have an Idea?</a></li>
+        <li><a href="contacto_en.html">Contact</a></li>
+        <li><a href="clientes_en.html">Clients</a></li>
+        <li><a href="trabaja_en.html">Work With Us</a></li>
+        <li><a href="idiomas.html">Languages</a></li>
+        <li><a href="redes_en.html">Social Media</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="http://localhost:8085">Issue Tracker</a></li>
+    </ul>
+</nav>
+<main style="padding: 20px;">
+<h2>Submit Your Idea</h2>
+<form action="php/submit_idea.php" method="post">
+<label>Name:</label><input type="text" name="name" required>
+<label>Email:</label><input type="email" name="email" required>
+<label>Idea:</label><textarea name="idea" required></textarea>
+<button type="submit">Send</button>
+</form>
+</main>
+<footer><p>&copy; 2025 Fictional Company. All rights reserved.</p></footer>
 </body>
 </html>

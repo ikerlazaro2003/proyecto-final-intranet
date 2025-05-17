@@ -2,54 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work with Us - Company Name</title>
+    <title>Work With Us - Fictional Company</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header with logo and navigation -->
-    <header>
-        <div class="logo">
-            <img src="img/logo.png" alt="Company Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index_en.html">Home</a></li>
-                <li><a href="empresa_en.html">About Us</a></li>
-                <li><a href="productos_en.html">Products/Services</a></li>
-                <li><a href="equipo_en.html">Our Team</a></li>
-                <li><a href="ideas_en.html">Have an Idea?</a></li>
-                <li><a href="contacto_en.html">Contact</a></li>
-                <li><a href="idiomas.html">Languages</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Main content for Work with Us -->
-    <section class="work-with-us">
-        <h1>Join Our Team</h1>
-        <p>If you want to be part of our company, please send us your CV and a cover letter:</p>
-
-        <form action="trabaja.php" method="post" enctype="multipart/form-data">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="cv">Upload Your CV:</label>
-            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
-
-            <label for="cover_letter">Cover Letter:</label>
-            <textarea id="cover_letter" name="cover_letter" required></textarea>
-
-            <button type="submit">Submit Application</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
-    </footer>
+<header>
+    <img src="img/logo_webinova.png" alt="Webinova Solutions Logo" style="height: 80px;"><h1>Fictional Company</h1></header>
+<nav>
+    <ul>
+        <li><a href="index_en.html">Home</a></li>
+        <li><a href="empresa_en.html">The Company</a></li>
+        <li><a href="productos_en.html">Products/Services</a></li>
+        <li><a href="equipo_en.html">The Team</a></li>
+        <li><a href="ideas_en.html">Have an Idea?</a></li>
+        <li><a href="contacto_en.html">Contact</a></li>
+        <li><a href="clientes_en.html">Clients</a></li>
+        <li><a href="trabaja_en.html">Work With Us</a></li>
+        <li><a href="idiomas.html">Languages</a></li>
+        <li><a href="redes_en.html">Social Media</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="http://localhost:8085">Issue Tracker</a></li>
+    </ul>
+</nav>
+<main style="padding: 20px;">
+<h2>Apply for a Job</h2>
+<form action="php/submit_trabaja.php" method="post">
+<label>Name:</label><input type="text" name="name" required>
+<label>Email:</label><input type="email" name="email" required>
+<label>CV (link):</label><input type="text" name="cv" required>
+<label>Cover Letter:</label><textarea name="carta" required></textarea>
+<button type="submit">Submit</button>
+</form>
+</main>
+<footer><p>&copy; 2025 Fictional Company. All rights reserved.</p></footer>
 </body>
 </html>
